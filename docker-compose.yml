@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+        php:
+                image: php
+                volumes:
+                        - ".:/app"
+                command: "php /app/unitSort.php /app/data.txt"
+        ruby:
+                image: ruby
+                volumes:
+                        - ".:/app"
+                command: "ruby /app/unitSort.rb /app/data.txt"
